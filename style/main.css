@@ -1,0 +1,339 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --cwhite :  hsl(0, 0%, 98%);
+    --cgray  :  hsl(0, 0%, 41%);
+    --cblack :  hsl(0, 0%, 8%);
+}
+
+.container {
+    padding: 0px 15px;
+    margin: 0px auto;
+}
+
+
+/* ====== Start Media Query ======*/
+/* Small */
+@media (min-width: 768px) {
+    .conatiner {
+        width: 750px;
+    }
+}
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+/* Fix White Space Problem  */
+@media only screen and (max-width:768px) {
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+/* ====== End Media Query ====== */
+/* ====== Reset componantes ====== */
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+/* ====== Reset componantes ====== */
+body {
+    font-family: "Epilogue", sans-serif;
+    background-color: var(--cwhite);
+    position: relative;
+}
+
+/* ====== Start Header Section ====== */
+header {
+    padding: 30px 30px 0px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .left-side {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+nav .logo {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+nav .logo img {
+    width: 80px;
+}
+nav  .main-nav {
+    display: flex;
+}
+.main-nav-mobile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    flex-direction: column;
+    display: flex !important;
+    width: 200px;
+    height: 100%;
+    padding: 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    
+}
+
+.main-nav-mobile > img  {
+    width: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+}
+.main-nav-mobile > li {
+    margin-bottom: 30px;
+}
+nav .main-nav > li {
+    padding-right: 50px;
+    position: relative;
+}
+nav .main-nav > li:last-child {
+    padding-right: 0;
+}
+nav .main-nav > li > a {
+    display: block;
+    position: relative;
+}
+nav ul > li a, 
+nav .right-side a  {
+    color: var(--cgray);
+    font-size: 16px;
+    font-weight: bold;
+    transition-duration: 0.3s;
+}
+nav ul > li a:hover , nav .right-side a:hover {
+    color: var(--cblack);
+}
+
+nav .main-nav > li > ul {
+    position: absolute;
+    width: 155px;
+    padding: 20px;
+    border-radius: 10px;
+    top: 40px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #fff;
+    display: none;
+    z-index: 999;
+}
+
+nav .main-nav-mobile  > li > ul {
+    position: relative;
+    top: 10px;
+    box-shadow: none;
+}
+
+nav .main-nav > li:nth-child(2) > ul {
+    left: -77px;
+}
+nav .main-nav-mobile > li:nth-child(2) > ul {
+    left: 0;
+}
+nav .main-nav > li:nth-child(3) > ul {
+    left: 0;
+}
+nav .main-nav > li > ul > li {
+    margin-bottom: 15px;
+}
+nav .main-nav > li > ul > li > img {
+    margin-right: 4px;
+}
+nav .main-nav > li > ul > li:last-child {
+    margin-bottom: 0px;
+}
+nav .right-side a:last-child {
+    margin-left: 30px;
+    border: 1px solid var(--cblack);
+    padding: 7px 15px;
+    border-radius: 13px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
+} 
+.main-nav-mobile .links a {
+    color: var(--cgray);
+    font-size: 16px;
+    font-weight: bold;
+    transition-duration: 0.3s;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.main-nav-mobile .links a:last-child {
+    border: 1px solid var(--cblack);
+    padding: 7px 15px;
+    border-radius: 13px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
+    margin-top: 30px;
+}
+.show {
+    display: block !important;
+}
+.icon-burger {
+    display: none;
+}
+@media (min-width:767px) {
+    .main-nav > img,
+    .main-nav .links  {
+        display: none;
+    }
+}
+@media (max-width:991px) {
+    nav .main-nav > li {
+        padding-right: 15px;
+    }
+}
+@media (max-width:767px) {
+    .icon-burger {
+        display: block;
+    }
+    nav  .main-nav,
+    nav .right-side .links {
+        display: none
+    }
+}
+
+/* ====== End Header Section ====== */
+
+/* ====== Start Main Section ====== */
+main {
+    padding-top : 50px;
+}
+main .container {
+    display: flex;
+    justify-content: space-between;
+}
+main .left-side {
+    padding-top: 100px;
+}
+main .left-side h2 {
+    font-size: 70px;
+    margin-bottom: 50px;
+    width: 480px;
+    overflow-wrap: break-word;
+}
+main .left-side p {
+    margin-bottom: 50px;
+    font-size: 16px;
+    color: var(--cgray);
+    font-weight: bold;
+    line-height: 1.6;
+}
+main .left-side a{
+    width: fit-content;
+    color: var(--cwhite);
+    background-color: var(--cblack);
+    padding: 20px 30px;
+    display: block;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 50px;
+    transition-duration: 0.3s;
+    border: 1px solid var(--cwhite);
+}
+
+main .left-side a:hover {
+    background-color: var(--cwhite);
+    border: 1px solid var(--cblack);
+    color: var(--cblack);
+}
+
+main .left-side .adv img{
+    padding-right: 15px;
+}
+main .left-side .adv img:last-child {
+    padding: 0;   
+}
+main .right-side img {
+    max-width: 100%;
+    object-position: right;
+}
+main .left-side, main .right-side {
+    flex-basis: 45%;
+}
+
+@media (max-width:991px) {
+    main .left-side {
+        width: fit-content;
+    }
+    main .left-side h2 {
+        width: fit-content;
+        font-size: 30px;
+    }
+    main .left-side a {
+        margin-bottom: 50px;
+    }
+    main .left-side .adv img {
+        width: 70px;
+    }
+}
+
+@media (max-width:767px) {
+    main .container {
+        flex-direction: column;
+    }
+    main .left-side {
+        padding-top: 50px;
+        order: 2;
+    }
+    main .left-side h2 {
+        width: auto;
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    main .left-side p {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    main .left-side a {
+        margin: 0 auto 30px;
+    }
+    main .left-side .adv{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    main .left-side .adv img{
+        width: 70px;
+        padding-right: 0;
+    }
+}
+/* ====== End Main Section ====== */
